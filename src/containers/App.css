@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+.card-small {
+  display: flex;
+  flex-direction: row;
+  width: 350px;
+}
+img {
+  border-radius: 50%;
+  margin-left:  3rem;
+  margin-top: 1rem;
+  width: 35%;
+}
+.spinner {
+  margin: 2rem 0 0 4rem;
+}
+table {
+  width: 60%;
+  margin-left: 5rem;
+}
+td,th {
+  margin-left: 5rem;
+}
+form {
+  width: 60%;
+  margin-left: 5rem;
+}
+.table_info {
+  margin-left: 5rem;
+}
+h4 {
+  margin-left: 5rem;
+}
+.main_button {
+  position: absolute;
+}
