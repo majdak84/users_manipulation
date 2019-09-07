@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const SearchBox = (props) => {
     return (
@@ -13,5 +14,9 @@ const SearchBox = (props) => {
             </div>
         </div>
     );
+}
+SearchBox.propTypes = {
+    placeholder: PropTypes.string,
+    type: PropTypes.oneOf(['text'])
 }
 export default SearchBox;

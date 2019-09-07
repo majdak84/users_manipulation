@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from "prop-types";
 
 class Form extends Component {
     constructor(props) {
@@ -17,8 +18,8 @@ class Form extends Component {
         });
     }
     onFormSubmit = (event) => {
+        //console.log(event)
         event.preventDefault();
-        
         this.props.handleSubmit(this.state);
         this.setState(this.initialState);
     }
@@ -47,5 +48,13 @@ class Form extends Component {
             </form>
         );
     }
+}
+Form.propTypes={
+    name:PropTypes.string,
+    job:PropTypes.string,
+    onChange:PropTypes.func,
+    onSubmit: PropTypes.func,
+    type: PropTypes.oneOf(['text']),
+    placeholder: PropTypes.string,
 }
 export default Form;

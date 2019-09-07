@@ -1,7 +1,8 @@
 import React from "react";
 import User from "./User";
+import PropTypes from 'prop-types';
 
-function UserList(props) {
+function UserList (props) { //console.log(props)
     const filteredUsers = props.filteredUsers.map((user,id) =>{
         //console.log(user)
         return <User key={id}
@@ -17,5 +18,10 @@ function UserList(props) {
             {filteredUsers}
         </div>    
     );    
+}
+
+UserList.propTypes = {
+    filteredUsers: PropTypes.array.isRequired
+    
 }
 export default UserList;

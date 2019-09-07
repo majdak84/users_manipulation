@@ -5,6 +5,7 @@ import SearchBox from "../components/SearchBox";
 import MDSpinner from 'react-md-spinner';
 import Table from '../components/Table';
 import Form from '../components/Form';
+import PropTypes from "prop-types";
 
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
       };
   }
   removeCharacter = index => {
+    //console.log(index)
     const {characters} = this.state;
 
     this.setState({
@@ -79,5 +81,12 @@ class App extends Component {
     );
   }
 }
-
+App.propTypes={
+  users:PropTypes.array,
+  characters:PropTypes.array,
+  searchUser:PropTypes.string,
+  error:PropTypes.string,
+  filteredUsers:PropTypes.array,
+  onSubmit: PropTypes.func
+}
 export default App;

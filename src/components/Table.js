@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from "prop-types";
 
 
 const TableHeader = () => {
@@ -38,5 +39,11 @@ class Table extends Component {
             </table>
         );
     }
+}
+Table.propTypes = {
+    rows:PropTypes.array,
+    onClick: PropTypes.func,
+    characterData:PropTypes.array,
+    removeCharacter:PropTypes.func
 }
 export default Table;

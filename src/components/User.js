@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types"
 
 function User(props) {
     return (
@@ -18,6 +19,11 @@ function User(props) {
       </div>  
     );
 }
-
+User.propTypes = {
+  first_name: PropTypes.string.isRequired,
+  last_name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  alt: PropTypes.string
+}
 
 export default User;
